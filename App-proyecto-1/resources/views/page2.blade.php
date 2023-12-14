@@ -1,16 +1,34 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-  
- <div class="card">
-    <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-    <div class="card-body">
-        <h4 class="card-title">pagina 2</h4>
-        <p class="card-text">Text</p>
-    </div>
- </div>
- 
-   
+
+<div
+    class="table-responsive"
+>
+    <table
+        class="table table-primary"
+    >
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">nombre</th>
+                <th scope="col">cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            @foreach ($productosN as $producto )
+                
+            <tr class="">
+                <td scope="row">{  producto-id }</td>
+                <td scope="row">{  producto-nombre }</td>
+                <td scope="row">{  producto-cantidad }</td>
+            </tr>
+          
+            @endforeach
+        </tbody>
+    </table>
 </div>
+
+
 @endsection

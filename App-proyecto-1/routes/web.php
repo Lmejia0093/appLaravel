@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProdutosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/pagina',[App\Http\Controllers\productosVenta::class, 'indexProducto'])->name('page2');
+Route::get('/paginaindex',[App\Http\Controllers\ProdutosController::class,'index'])->name('indexpage');
